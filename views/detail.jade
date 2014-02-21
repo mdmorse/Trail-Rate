@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    .jumbotron
+        h1.header= trail.name
+    .col-sm-6.small-offset-3
+        h3= trail.location
+        p= trail.description
+        
+        for trail in trails
+                p
+                    a(href= '/' + trail.name)= trail.name
+            a(href= '/') Home

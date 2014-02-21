@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    .jumbotron
+        h1.header Trail Rate
+    
+    for trail in trails
+        p
+            a(href= '/' + trail.name)= trail.name                
+    a(href= '/') Home  
+
