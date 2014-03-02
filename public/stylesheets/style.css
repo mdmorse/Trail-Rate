@@ -1,12 +1,40 @@
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px;
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+ 
 }
-
-a {
-  color: #00B7FF;
+header{
+	widows: 100%;
+	background-color: #4E5D6C;
 }
+.logo-bar{
+	
+	margin-top:-21px;
+	overflow: hidden;
+	height: 350px;
+	position: relative;
+}
+img{
+	width: 100%;
+	height: auto;
+	left: 0px;
+	top:0px;
 
-.header{
-	text-align: center;
+}
+.image-wrapper{
+	width:100%;
+	position: relative;
+}
+h1 span{
+	position: absolute;
+	width:100%;
+	top:200px;
+	left:0px;
+	width:25%;
+	margin-left: 30px;
+	letter-spacing: -1px;  
+   	background: rgb(0, 0, 0); /* fallback color */
+   	background: rgba(0, 0, 0, 0.7);
+   	padding: 10px; 
 }

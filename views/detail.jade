@@ -1,13 +1,20 @@
 extends layout
 
 block content
-    .jumbotron
-        h1.header= trail.name
-    .col-sm-6.small-offset-3
-        h3= trail.location
+    header
+
+        .btn-group.btn-group-justified
+            a.btn.btn-default(href= '/') Home
+                .glyphicon.glyphicon-tree-conifer  
+            for trail in trails
+                a.btn.btn-default(href= '/' + trail.name)= trail.name
+         
+        .logo-bar 
+            .img-wrapper
+                h1 
+                    span Trail Rate 
+                img(src = 'http://cdn01.wallconvert.com/_media/wallpapers_1366x768/1/2/black-hills-and-white-mountains-11641.jpg')
+    
+    p
+        h2= trail.location
         p= trail.description
-        
-        for trail in trails
-                p
-                    a(href= '/' + trail.name)= trail.name
-            a(href= '/') Home
