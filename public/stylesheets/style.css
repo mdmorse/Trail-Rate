@@ -33,12 +33,13 @@ h1 span{
 	left:0px;
 	width:25%;
 	margin-left: 30px;
-	letter-spacing: -1px;  
+	/*letter-spacing: -1px;  */
    	background: rgb(0, 0, 0); /* fallback color */
    	background: rgba(0, 0, 0, 0.7);
    	padding: 10px; 
 }
 
-/*.location-wrapper{
- display:none;
-*/}
+ .description{
+ 	padding:20px;
+ 	display: none;
+ }

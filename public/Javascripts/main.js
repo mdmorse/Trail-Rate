@@ -1,21 +1,26 @@
 $(function(){
 
 
-// $(document).ready(function(){
-// 	var logo = document.getElementById("bar-slide");
-//     TweenLite.to(logo,2, {left:"200px"});
-// 	});
 
+	$(window).load(function(){
+		var logo = document.getElementById("logo-slide");
+	    TweenLite.to(logo,4, {left:"1000px"});
+		});
 
-// $(document).ready(function() {
-//     var logo = document.getElementById("bar-slide");
-//     TweenLite.to(logo, 2, {right:"200px", ease:SlowMo.ease});
-// });
+	$(window).load(function(){
+		var location = document.getElementById("location-slide");
+	    TweenLite.to(location,4, {left:"500px"});
+		});
 
-$(document).ready(function(){
-	var logo = document.getElementById("logo-slide");
-    TweenLite.to(logo,8, {left:"900px"});
+	$(document).ready(function(){
+		$('.description').delay('1500').slideDown('slow')
 	});
+
+	// $(document).ready(function() {
+	//     var location = document.getElementById("location-slide");
+	//     TweenLite.to(location, 2, {right:"200px", ease:SlowMo.ease});
+	// });
+
 
 
 
