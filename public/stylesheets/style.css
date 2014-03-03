@@ -18,7 +18,7 @@ header{
 img{
 	width: 100%;
 	height: auto;
-	left: 0px;
+	left: 100px;
 	top:0px;
 
 }
@@ -38,3 +38,7 @@ h1 span{
    	background: rgba(0, 0, 0, 0.7);
    	padding: 10px; 
 }
+
+/*.location-wrapper{
+ display:none;
+*/}

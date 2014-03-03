@@ -12,9 +12,10 @@ block content
         .logo-bar 
             .img-wrapper
                 h1 
-                    span Trail Rate 
+                    span= trail.location
+
                 img(src = 'http://cdn01.wallconvert.com/_media/wallpapers_1366x768/1/2/black-hills-and-white-mountains-11641.jpg')
     
-    p
+    #location-wrapper
         h2= trail.location
         p= trail.description
