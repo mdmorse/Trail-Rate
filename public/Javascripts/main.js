@@ -12,8 +12,12 @@ $(function(){
 	    TweenLite.to(location,4, {left:"35%"});
 		});
 
-	$(document).ready(function(){
-		$('.description').delay('1500').slideDown('slow')
+	$(window).ready(function(){
+		$('.trail-name').delay('1000').slideDown('slow')
+	});
+
+	$('.trail-name').click(function(){
+		$('.description').slideToggle('fast');
 	});
 
 	// $(document).ready(function() {

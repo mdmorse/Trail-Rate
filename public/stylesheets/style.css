@@ -10,6 +10,9 @@ header{
 	height: 25px;
 	/*border-bottom: white 1px solid;*/
 }
+h1{
+	font-size: 24em;
+}
 .container-fluid{
 	padding:20px;
 }
@@ -52,5 +55,6 @@ h1 span{
  .trail-name{
  	padding: 10px;
  	margin: 20px;
+ 	display: none;
  }
  
