@@ -20,6 +20,7 @@ module.exports = {
 	getTrail: function(name){
 		var matchingTrail = trails.filter(function(t){
 			return t.location===name;
+			
 		});
 		return matchingTrail[0];
 	}

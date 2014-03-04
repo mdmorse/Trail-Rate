@@ -7,13 +7,18 @@ body {
 header{
 	widows: 100%;
 	background-color: #4E5D6C;
+	height: 25px;
+	/*border-bottom: white 1px solid;*/
+}
+.container-fluid{
+	padding:20px;
 }
 .logo-bar{
-	
 	margin-top:-21px;
 	overflow: hidden;
 	height: 350px;
 	position: relative;
+	border-bottom: 1px solid white;
 }
 img{
 	width: 100%;
@@ -40,6 +45,12 @@ h1 span{
 }
 
  .description{
- 	padding:20px;
+ 	padding:10px;
+ 	margin: 20px;
  	display: none;
  }
+ .trail-name{
+ 	padding: 10px;
+ 	margin: 20px;
+ }
+ 

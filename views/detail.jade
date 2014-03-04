@@ -1,24 +1,25 @@
 extends layout
 
 block content
-    header
-
+    header this is header info
+    .cotainer-fluid    
+        .logo-bar 
+            .img-wrapper
+                h1 
+                    span#location-slide= trail.location
+            .img-wrapper
+                h1 
+                    span#logo-slide Trail Rate        
+                img(src = 'http://cdn01.wallconvert.com/_media/wallpapers_1366x768/1/2/black-hills-and-white-mountains-11641.jpg')
         .btn-group.btn-group-justified
             a.btn.btn-default(href= '/') Home
                 .glyphicon.glyphicon-tree-conifer  
             for trail in trails
                 a.btn.btn-default(href= '/' + trail.location)= trail.location
-         
-        .logo-bar 
-            .img-wrapper
-                h1 
-                    span#location-slide= trail.location
 
-            .img-wrapper
-                h1 
-                    span#logo-slide Trail Rate        
-
-                img(src = 'http://cdn01.wallconvert.com/_media/wallpapers_1366x768/1/2/black-hills-and-white-mountains-11641.jpg')
-    .description
-        h2= trail.name
-        p= trail.description
+    .row
+        .col-sm-6
+            .trail-name
+                h2= trail.name
+            .description    
+                p= trail.description
