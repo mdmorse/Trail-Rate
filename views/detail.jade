@@ -18,8 +18,12 @@ block content
                 a.btn.btn-default(href= '/' + trail.location)= trail.location
 
     .row
-        .col-sm-6
-            .trail-name
-                h2= trail.name
-            .description    
-                p= trail.description
+        .col-sm-12
+            a.trail-name.h2= trail.name
+            .clear   
+                .description    
+                    p= trail.description
+                    .btn.btn-default#map-slide-btn More Info
+                    #map-container
+                        #map-canvas        
+            

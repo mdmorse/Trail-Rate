@@ -16,6 +16,9 @@ h1{
 .container-fluid{
 	padding:20px;
 }
+.clear{
+	clear: both;
+}
 .logo-bar{
 	margin-top:-21px;
 	overflow: hidden;
@@ -51,10 +54,30 @@ h1 span{
  	padding:10px;
  	margin: 20px;
  	display: none;
+ 	border-bottom:1px solid white;
+ 	overflow: hidden;
+
  }
  .trail-name{
  	padding: 10px;
  	margin: 20px;
  	display: none;
+ 	cursor: pointer;
+ 	cursor: hand;
+ }
+ #map-canvas { 
+ 	height: 100%;}
+ 
+ #map-container{
+ 	height:400px;
+ 	width:600px;
+ 	background-color: #4e5d6c;
+ 	padding:10px;
+ 	display: none;
+ 	float:right;
+ }
+ 
+ #map-slide-btn{
+ 
  }
  
