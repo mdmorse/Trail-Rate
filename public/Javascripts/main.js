@@ -31,11 +31,16 @@ $(function(){
 	});
 	
 	$('#map-slide-btn').click(function() {
-		$('#map-container').slideToggle('slow');
+		$('#map-container').slideToggle('slow',function(){
+		initialize();
+			
+		});
 		// $('#map-slide').text('Hide Map');
+	
+
 	});
 
-	
+//**********************creates mapt*********************
 
 
 	function initialize() {
@@ -46,7 +51,14 @@ $(function(){
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
       }
-      google.maps.event.addDomListener(window, 'load', initialize);
+      // google.maps.event.addDomListener(window, 'load', initialize);
+//******************creates marker on map*****************
+
+      var marker=new google.maps.Marker({
+  		position:myCenter,
+  		});
+
+		marker.setMap(map);
 
 	
 
