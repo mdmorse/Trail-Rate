@@ -29,7 +29,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', indexController.home);
-app.get('/:name',indexController.detail);
+app.get('/name',indexController.detail);
 
 
 http.createServer(app).listen(app.get('port'), function(){

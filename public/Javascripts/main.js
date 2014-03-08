@@ -8,22 +8,55 @@ $(function(){
 	    TweenLite.to(logo,4, {left:"73%"});
 		});
 
-	$(window).load(function(){
-		var location = document.getElementById("location-slide");
-	    TweenLite.to(location,4, {left:"35%"});
-		});
+	
+
+
+
+
+
+
+	// $(window).load(function(){
+	// 	var location = document.getElementById("location-slide");
+	//     TweenLite.to(location,4, {left:"35%"});
+	// 	});
+
+	
+
+
+	$('.location-button').click(function(e){
+		e.preventDefault();
+		var location = $(this).text();
+		$.ajax('/name',{
+			data:{location:location},
+			success:function(data){
+				var location = $("#location-slide");
+				location.text(data.location);
+	    		TweenLite.to(location,4, {left:"35%"});
+	    		
+			}		
+		})
+	});
+	
+
+
+
+
+
+
 
 	$(window).ready(function(){
 		$('.trail-name').delay('1000').slideDown('slow')
 	});
 
 	$(function(){
-   $("#map-slide-btn").click(function () {
-      $(this).text(function(i, text){
-          return text === "More Info" ? "Less Info" : "More Info";
-      })
-   });
-})
+	   $("#map-slide-btn").click(function () {
+	      $(this).text(function(i, text){
+	          return text === "More Info" ? "Less Info" : "More Info";
+      		})
+   		});
+	});
+
+	
 
 	$('.trail-name').click(function(){
 		$('.description').slideToggle('fast');
@@ -35,7 +68,7 @@ $(function(){
 		initialize();
 			
 		});
-		// $('#map-slide').text('Hide Map');
+		
 	
 
 	});
@@ -51,14 +84,19 @@ $(function(){
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
       }
-      // google.maps.event.addDomListener(window, 'load', initialize);
+      
+
+
+
+
+
 //******************creates marker on map*****************
 
-      var marker=new google.maps.Marker({
-  		position:myCenter,
-  		});
+  //     var marker=new google.maps.Marker({
+  // 		position:myCenter,
+  // 		});
 
-		marker.setMap(map);
+		// marker.setMap(map);
 
 	
 
