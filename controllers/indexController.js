@@ -12,7 +12,7 @@ module.exports = {
 		res.send(req.query);
 		// res.render('detail.jade',{
 		// 	trails: trailModel.getAllTrails(),
-		// 	trail: trailModel.getTrail(req.params.name)
+			// trail: trailModel.getTrail(req.params.name)
 		// 	});
 	}
 };

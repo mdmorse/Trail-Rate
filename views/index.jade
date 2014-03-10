@@ -17,4 +17,9 @@ block content
                 .glyphicon.glyphicon-home  
             for trail in trails
                 .btn.btn-default.location-button= trail.location
-
+        .container-content
+            .row
+                .col-sm-12
+            for trail in trails
+                ul        
+                    a.trail-name.h3= trail.name
