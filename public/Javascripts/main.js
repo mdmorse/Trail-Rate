@@ -20,35 +20,32 @@ $(function(){
 	//     TweenLite.to(location,4, {left:"35%"});
 	// 	});
 
-	
+	//**********************Ajax Call********************
 
-
+	var animate = function(){
 	$('.location-button').click(function(e){
 		e.preventDefault();
 		var location = $(this).text();
 		$.ajax('/name',{
 			data:{location:location},
 			success:function(data){
+				$('#location-slide').css({'left':'0px', 'display':'none'});
+				$('#location-slide').finish();
+				//animate header info
 				var location = $("#location-slide").fadeIn('slow');
-				location.text(data.location);
-	    		TweenLite.to(location,4, {left:"35%"});
+				var tweenControll = location.text(data.location);
+	    			TweenLite.to(location,3, {left:"35%"});
+
+	    		//animates trail names
+	    		var name = $('.trail-name').delay('1000').slideDown('slow');
 	    		
 			}		
 		})
 	});
+		
+}
 	
-	$('.location-button').click(function(e){
-		e.preventDefault();
-		var name = $(this).text();
-		$.ajax('/name',{
-			data:{name:name},
-			success:function(data){
-				console.log(data);
-				var name = $('.trail-name').delay('1000').slideDown('slow');
-				name.text(data.name);
-			}		
-		})
-	});
+animate();	
 
 
 
