@@ -4,6 +4,24 @@ body {
   /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
  
 }
+.clear{
+	clear: both;
+}
+.container-content{
+ 	width: 1180px;
+ 	margin: auto;
+ }
+/* .container-fluid{
+	padding:20px;
+}*/
+.description{
+ 	padding:10px;
+ 	margin: 20px;
+ 	display: none;
+ 	border-bottom:1px solid white;
+ 	overflow: hidden;
+ 	position: relative;
+ }
 header{
 	widows: 100%;
 	background-color: #4E5D6C;
@@ -12,31 +30,6 @@ header{
 }
 h1{
 	font-size: 24em;
-}
-.container-fluid{
-	padding:20px;
-}
-.clear{
-	clear: both;
-}
-.logo-bar{
-	margin-top:-21px;
-	overflow: hidden;
-	height: 350px;
-	position: relative;
-	border-bottom: 1px solid white;
-	box-shadow: 
-}
-img{
-	width: 100%;
-	height: auto;
-	left: 100px;
-	top:0px;
-
-}
-.image-wrapper{
-	width:100%;
-	position: relative;
 }
 h1 span{
 	position: absolute;
@@ -51,52 +44,58 @@ h1 span{
    	padding: 10px; 
 }
 
- .description{
- 	padding:10px;
- 	margin: 20px;
- 	display: none;
- 	border-bottom:1px solid white;
- 	overflow: hidden;
- 	position: relative;
+img{
+	width: 100%;
+	height: auto;
+	left: 100px;
+	top:0px;
 
- }
- .trail-name {
- 	padding: 10px;
- 	margin: 20px;
- 	display: none;
- 	cursor: pointer;
- 	cursor: hand;
- 	
-
- }
- #map-canvas { 
- 	height: 100%;
-	width:100%;
-	padding: 0px;
-
- }
- 
- #map-container{
- 	height:250px;
- 	width:400px;
- 	background-color: #4e5d6c;
- 	padding:10px;
- 	display: none;
- 	float:right;
- 	margin-bottom: 10px;
- }
- 
- #map-slide-btn{
- }
- img.icon{
+}
+img.icon{
  	width: 30px;
  	height:30px;
- }
- .container-content{
- 	width: 1180px;
- 	margin: auto;
- }
- 
+}
+.image-wrapper{
+	width:100%;
+	position: relative;
+}
 #location-slide{
 	display: none;
 }
+.logo-bar{
+	margin-top:-21px;
+	overflow: hidden;
+	height: 350px;
+	position: relative;
+	border-bottom: 1px solid white;
+	box-shadow: 
+}
+#map-canvas { 
+ 	height: 100%;
+	width:100%;
+	padding: 0px;
+} 
+.map-container{
+	height:250px;
+	width:400px;
+	background-color: #4e5d6c;
+	padding:10px;
+	display: none;
+	float:right;
+	margin-bottom: 10px;
+}
+ 
+.map-slide-btn{
+
+}
+
+.trail-info-wrapper {
+	padding: 10px;
+	margin: 20px;
+	display: none;
+	cursor: pointer;
+	cursor: hand;
+}
+
+ 
+ 

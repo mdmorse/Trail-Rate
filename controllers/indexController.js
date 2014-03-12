@@ -9,10 +9,7 @@ module.exports = {
 	},
 
 	detail: function(req,res){
-		res.send(req.query);
-		// res.render('detail.jade',{
-		// 	trails: trailModel.getAllTrails(),
-			// trail: trailModel.getTrail(req.params.name)
-		// 	});
+		var trail = trailModel.getTrail(req.query.location);
+		res.send(trail);
 	}
 };
