@@ -42,8 +42,8 @@ $(function(){
 		    		$('.trail-info-wrapper').empty();
 		    		$('.trail-info-wrapper').append('<h3>' + data.name + '</h3>');
 		    		$('.trail-info-wrapper').append('<p>' + data.description + '</p>');
-		    		$('.trail-info-wrapper').first().delay('1000').slideDown('slow');
-		    		// $('.trail-info-wrapper').append('div class = "btn");
+		    		$('.main-trail-container').first().delay('1000').slideDown('slow');
+		    		// $('.trail-info-wrapper').append('<div class = "btn btn-default map-slide-btn">More Info</div>' );
 
 
 				}		
