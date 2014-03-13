@@ -6,7 +6,7 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var indexController = require('./controllers/indexController.js')
+var indexController = require('./controllers/indexController.js');
 
 
 var app = express();
