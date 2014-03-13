@@ -2,6 +2,7 @@ extends layout
 
 block content
     header
+        .form-wrapper
     .cotainer    
         .logo-bar 
             .img-wrapper
@@ -16,7 +17,7 @@ block content
             a.btn.btn-default(href= '/') Home
                 .glyphicon.glyphicon-home  
             for trail in trails
-                .btn.btn-default.location-button= trail.location
+                .btn.btn-default.location-button= trail
         .container-content
             .row
                 .col-sm-12

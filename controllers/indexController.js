@@ -4,7 +4,7 @@ var trailModel = require('../models/trail.js');
 module.exports = {
 	home:function (req,res){
 		res.render('index.jade',{
-			trails: trailModel.getAllTrails()
+			trails: trailModel.filter()
 		});
 	},
 
@@ -12,4 +12,5 @@ module.exports = {
 		var trail = trailModel.getTrail(req.query.location);
 		res.send(trail);
 	}
+
 };

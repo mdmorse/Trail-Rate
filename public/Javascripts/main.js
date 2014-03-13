@@ -50,11 +50,11 @@ $(function(){
 			})
 		});		
 	}
-
 displayInfo();	
 
 
 
+//**************************creates map***************************
 
 	$('.map-slide-btn').click(function() {
 		$(this).next('.map-container').first().slideToggle('slow',function(){
@@ -70,18 +70,7 @@ displayInfo();
 		});
 	});
 
-//**********************creates map*********************
 
-
-	// function initialize() {
- //        var mapOptions = {
- //          center: new google.maps.LatLng(-34.397, 150.644),
- //          zoom: 8
- //        };
- //        var map = new google.maps.Map(document.getElementById("map-canvas"),
- //            mapOptions);
- //      }
-      
 
 
 

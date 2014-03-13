@@ -11,6 +11,9 @@ body {
  	width: 1180px;
  	margin: auto;
  }
+ .container{
+ 	overflow: hidden;
+ }
 /* .container-fluid{
 	padding:20px;
 }*/
@@ -26,6 +29,7 @@ header{
 	widows: 100%;
 	background-color: #4E5D6C;
 	height: 25px;
+	display: block;
 	/*border-bottom: white 1px solid;*/
 }
 h1{
@@ -58,6 +62,7 @@ img.icon{
 .image-wrapper{
 	width:100%;
 	position: relative;
+	margin-top: 10px;
 }
 #location-slide{
 	display: none;
@@ -75,7 +80,6 @@ img.icon{
 	padding: 10px;
 	margin: 20px;
 	cursor: pointer;
-	cursor: hand;
 }
 
 #map-canvas { 
@@ -91,9 +95,20 @@ img.icon{
 	display: none;
 	float:right;
 	margin-bottom: 10px;
+	-webkit-box-shadow: 0px 7px 5px 0px rgba(50, 50, 50, 0.78);
+	-moz-box-shadow:    0px 7px 5px 0px rgba(50, 50, 50, 0.78);
+	box-shadow:         0px 7px 5px 0px rgba(50, 50, 50, 0.78);
 }
  
 .map-slide-btn{
+	cursor: hand;
+
+}
+.form-wrapper{
+	width: 300px;
+	height: 10px;
+	display: block;
+	overflow: hidden;
 
 }
 
