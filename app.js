@@ -23,7 +23,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect('mongodb://localhost/trailrate');
+// mongoose.connect('mongodb://localhost/trailrate');
 
 // development only
 if ('development' == app.get('env')) {
