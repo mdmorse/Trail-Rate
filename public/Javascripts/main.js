@@ -42,11 +42,11 @@ $(function(){
 		    		$('.trail-info-wrapper').empty();
 
 		    		for(i = 0; i < data.length; i++){
-		    			var newItem = $("<div class = 'trail-item'>")
+		    			var newItem = $("<div class = 'trail-item'>");
 		    			newItem.append('<h3>' + data[i].name + '</h3>');
 		    			newItem.append('<p>' + data[i].description + '</p>');
 		    			newItem.append('<div class = "btn btn-success more-info-btn">More Info</div>');
-		    			newItem.append('<div class = "map-container"><div id = "map-canvas"></div></div>');
+		    			newItem.append('<div class = "map-container"><div id = "map-canvas'+ i +'"></div></div>');
 		    			newItem.appendTo('.trail-info-wrapper');
 		    		}
 		    		
