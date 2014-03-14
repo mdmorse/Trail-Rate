@@ -1,0 +1,18 @@
+.container
+        .jumbotron.text-center.text-center
+            h1 Trail Rate
+            h2 Add Trail Info
+
+        form(action="/add-trail", method="post")
+            .form-group
+                input.form-control(name="name", type="text", placeholder="Trail Name")
+            .form-group
+                textarea.form-control(name="location",type="text", placeholder="Location")
+            .form-group
+                textarea.form-control(name="skills",rows="3", placeholder="Description")
+            .form-group
+                input.btn.btn-default(type="submit")    
+                a(href='/applicants') 
+                    .btn.btn-default View applicants
+        #success-message.alert.alert-success.hidden 
+            | Thank you!!

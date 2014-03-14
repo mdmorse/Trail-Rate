@@ -7,7 +7,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var indexController = require('./controllers/indexController.js');
-
+var mongoose = require('mongoose');
 
 var app = express();
 
@@ -23,13 +23,17 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+mongoose.connect('mongodb://localhost/trailrate');
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
 app.get('/', indexController.home);
-app.get('/name',indexController.detail);
+app.get('/trail',indexController.detail);
+// app.get('/save', indexController.save);
+app.post('/trail',indexController.create);
 
 
 

@@ -8,8 +8,11 @@ $(function(){
 	    TweenLite.to(logo,4, {left:"73%"});
 		});
 
-	
-	   $(document).on('click',".map-slide-btn",function () {
+
+	   $(document).on('click',".more-info-btn",function () {
+			initialize();				
+
+
 	      $(this).text(function(i, text){
 	          return text === "More Info" ? "Less Info" : "More Info";
       		})
@@ -24,7 +27,7 @@ $(function(){
 		$('.location-button').click(function(e){
 			e.preventDefault();
 			var location = $(this).text();
-			$.ajax('/name',{
+			$.ajax('/trail',{
 				data:{location:location},
 				success:function(data){
 					console.log(data);
@@ -45,7 +48,7 @@ $(function(){
 		    			var newItem = $("<div class = 'trail-item'>")
 		    			newItem.append('<h3>' + data[i].name + '</h3>');
 		    			newItem.append('<p>' + data[i].description + '</p>');
-		    			newItem.append('<div class = "btn btn-success map-slide-btn">More Info</div>');
+		    			newItem.append('<div class = "btn btn-success more-info-btn">More Info</div>');
 						newItem.append('<div class = "map-container"><div id = "map-canvas"></div></div>');
 						newItem.appendTo('.trail-info-wrapper');
 					}
@@ -58,48 +61,34 @@ $(function(){
 			})
 		});		
 	}
-displayInfo();	
+	
+displayInfo();
 
 
 
 //**************************creates map***************************
 
-// 	var displayMap = function(){
-// 		$('.map-slide-btn').click(function(e){
-// 			e.preventDefault();
-// 			var location = $(this).text();
-// 			$.ajax('/name',{
-// 				data:{location:location},
-// 				success:function(data){
-// 					console.log('displayMap',data);
-// 					for(i = 0; i < data.length; i++){
-// 						$('.main-trail-container').append('<div class = "map-container"><div id = "map-canvas"></div></div>');
-// 					}
-// 				}
+	// $(document).on('click','.more-info-btn',function(){
+	// 	$(this).next('.map-container').showToggle('slow',function(){
+	// 		initialize();				
+	// 	});
+	// });
 
-// 			})
-// 		});
-// 	};
-// displayMap();
-
-
-
-
-
-	$('.map-slide-btn').click(function() {
-		$(this).next('.map-container').first().slideToggle('slow',function(){
-			initialize();	
-			function initialize(){
+	function initialize(){
 	        	var mapOptions = {
 	          	center: new google.maps.LatLng(-34.397, 150.644),
 	          	zoom: 8
 	        };
+
 	        var map = new google.maps.Map(document.getElementById("map-canvas"),
 	            mapOptions);
-	     	}			
-		});
-	});
+	     	}
+	
+	
 
+
+
+	
 
 
 
